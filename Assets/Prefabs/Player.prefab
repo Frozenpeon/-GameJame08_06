@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2745937629684726316}
   - component: {fileID: 1853639980715788526}
   - component: {fileID: 547808900639368541}
+  - component: {fileID: 4867384391129152602}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,6 +130,19 @@ MonoBehaviour:
   playerMovement: {fileID: 1853639980715788526}
   playerAnim: {fileID: 3882332450878751177}
   deathSprite: {fileID: -5793783286573933095, guid: 87461b5c23a23c04c876a0eba9476d72, type: 3}
+--- !u!114 &4867384391129152602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2403827657450410990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9975d1f56a3ecb47a8617c5845262cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHandler
+  weapons: []
 --- !u!1 &5558232680877244919
 GameObject:
   m_ObjectHideFlags: 0
