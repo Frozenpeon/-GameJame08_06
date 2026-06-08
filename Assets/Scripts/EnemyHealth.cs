@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour
     private float currentHealth;
 
     public Action<float, float> takesDamage;
-    public Action onDeath;
+    public Action<GameObject> onDeath;
     void Start()
     {
         currentHealth = maxHealth;
@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
         enemyMovement.SetCanMove(false);
         capsuleCollider2D.enabled = false;
         animator.SetTrigger("OnDeath");
-        onDeath?.Invoke();
+        onDeath?.Invoke(gameObject);
         Destroy(gameObject, 2f);
     }
 }
