@@ -235,4 +235,4 @@ MonoBehaviour:
   - {fileID: 2410635517405602792, guid: de63ef3dc675ef941a2eddccfd3641f7, type: 3}
   - {fileID: -2494442190302250955, guid: 7c90e5427e6bd024b971cc220e7569e2, type: 3}
   spriteRenderer: {fileID: 3368722304598041368}
-  animationSpeed: 3
+  animationSpeed: 0.3
