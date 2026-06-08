@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
     [SerializeField] private EnemyMovement enemyMovement;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D;
     private float currentHealth;
 
     public Action<float, float> takesDamage;
@@ -38,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {   spriteRenderer.enabled = false;
         enemyMovement.SetCanMove(false);
+        capsuleCollider2D.enabled = false;
         animator.SetTrigger("OnDeath");
         onDeath?.Invoke();
         Destroy(gameObject, 2f);
