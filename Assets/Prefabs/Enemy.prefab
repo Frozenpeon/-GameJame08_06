@@ -456,4 +456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0eaf2ecd97604d46ae09f982aa6f480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 100
+  maxHealth: 10
+  deathSprite:
+  - {fileID: -5793783286573933095, guid: 87461b5c23a23c04c876a0eba9476d72, type: 3}
+  - {fileID: 236568559760781859, guid: 57dd2d3cf48cba244afb49a33b78f42b, type: 3}
+  - {fileID: 4605685020492523063, guid: e4ac3317d0dfb0a4aa94f2da8a614743, type: 3}
+  spriteRenderer: {fileID: 5337695144907084844}
+  animator: {fileID: 913552084690144972}
+  enemyMovement: {fileID: 4215966376955808466}
