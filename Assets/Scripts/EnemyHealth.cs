@@ -4,6 +4,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100;
+    [SerializeField] private Sprite deathSprite;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private float currentHealth;
 
     public Action<float, float> takesDamage;
@@ -25,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
+        spriteRenderer.sprite = deathSprite;
         onDeath?.Invoke();
         Destroy(gameObject);
     }

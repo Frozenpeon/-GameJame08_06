@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4215966376955808466}
   - component: {fileID: 4801871174611508223}
   - component: {fileID: 913552084690144972}
-  - component: {fileID: -5016053427189232729}
+  - component: {fileID: 885589962292926275}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -444,7 +444,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5016053427189232729
+--- !u!114 &885589962292926275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
