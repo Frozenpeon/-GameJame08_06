@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Player: {fileID: 0}
   elapsedTime: 0
-  timeToSpawn: 1
+  timeToSpawn: 2
   enemiesPrefab:
   - {fileID: 6813516675019707831, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
   - {fileID: 6309275428737970383, guid: 5f0ee493d7b3e164db6e1ffa118e2a5b, type: 3}

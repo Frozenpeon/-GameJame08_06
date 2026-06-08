@@ -15,11 +15,10 @@ public class EnemySpawner : MonoBehaviour
         if (elapsedTime > timeToSpawn )
         {
             int i = (int)Random.Range(0, enemiesPrefab.Count);
-            print( i );
-            GameObject enemy = Instantiate(enemiesPrefab[i], Player.transform.position + Vector3.up * 10, Quaternion.identity);
+            Vector3 posSpawn = Random.insideUnitCircle.normalized * 15;
+            GameObject enemy = Instantiate(enemiesPrefab[i], Player.transform.position + posSpawn, Quaternion.identity);
             enemy.GetComponent<EnemyMovement>().Player = Player;
-            //elapsedTime = 0f
-            elapsedTime = -10f;
+            elapsedTime = 0f;
         }
     }
 }
