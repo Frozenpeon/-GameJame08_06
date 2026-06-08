@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     {
         player = Instantiate(playerPrefab, spawnPoint.transform.position, Quaternion.identity);
         mainCamera.GetComponent<CameraFollowPlayer>().Player = player;
+        GetComponent<EnemySpawner>().Player = player;
     }
 
     // Update is called once per frame
