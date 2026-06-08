@@ -18,7 +18,7 @@ public class EnemySoundHandler : MonoBehaviour
         GetComponent<EnemyHealth>().onDeath += onDeath;
     }
 
-    public void onDeath()
+    public void onDeath(GameObject thatDies)
     {
         audioPlayer.clip = deathSounds[(int)Random.Range(0, deathSounds.Count)];
         audioPlayer.Play();

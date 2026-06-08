@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     private float currentHealth;
 
     public Action<float, float> takesDamage;
-    public Action onDeath;
+    public Action<GameObject> onDeath;
     void Start()
     {
         currentHealth = maxHealth;
@@ -25,7 +25,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        onDeath?.Invoke();
-        Destroy(gameObject);
+        onDeath?.Invoke(gameObject);
     }
 }

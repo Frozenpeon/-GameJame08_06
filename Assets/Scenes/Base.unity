@@ -169,6 +169,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 2403827657450410990, guid: 800679cec2732424b8b175f0039b6acd, type: 3}
   spawnPoint: {fileID: 2045704345}
   mainCamera: {fileID: 1663553072}
+  spawner: {fileID: 18050581}
   healthBarHandler: {fileID: 1418823626}
 --- !u!114 &18050579
 MonoBehaviour:
@@ -301,6 +302,7 @@ MonoBehaviour:
   - {fileID: 6813516675019707831, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
   - {fileID: 6309275428737970383, guid: 5f0ee493d7b3e164db6e1ffa118e2a5b, type: 3}
   - {fileID: 1316453611640185219, guid: 11f281f9eb1485d46ae7921977ec3298, type: 3}
+  enemies: []
 --- !u!1 &20707828
 GameObject:
   m_ObjectHideFlags: 0
