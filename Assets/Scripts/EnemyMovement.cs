@@ -11,7 +11,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         direction = Player.transform.position - transform.position;
-        print(direction.normalized * Time.deltaTime * speed);
         GetComponent<Rigidbody2D>().linearVelocity = direction.normalized * Time.deltaTime * speed;
         }
 }
