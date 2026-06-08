@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -7,6 +9,8 @@ public class Health : MonoBehaviour
     [SerializeField] private PlayerAnim playerAnim;
     [SerializeField] private Sprite deathSprite;
     private int currentHealth;
+
+    public Action<int, int> takesDamage;
     void Start()
     {
         currentHealth = maxHealth;
@@ -15,6 +19,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        takesDamage?.Invoke(maxHealth, currentHealth);
         if (currentHealth <= 0)
         {
             Die();

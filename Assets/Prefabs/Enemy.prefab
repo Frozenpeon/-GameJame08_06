@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 8038180530694689203}
   - component: {fileID: 4215966376955808466}
   - component: {fileID: 4801871174611508223}
+  - component: {fileID: 5199167222851068126}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -282,7 +283,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -328,3 +329,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c84ca1504b876443a507273e2ebfbc9, type: 3}
   - {fileID: 8300000, guid: 7886fb10078021a48bbe4717fefec252, type: 3}
   volume: 0.015
+--- !u!114 &5199167222851068126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813516675019707831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0eaf2ecd97604d46ae09f982aa6f480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxHealth: 100
