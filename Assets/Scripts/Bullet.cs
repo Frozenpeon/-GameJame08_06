@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float speed = 100;
+    public Vector2 direction;
+    private void Start()
     {
-        
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(direction * speed * Time.deltaTime);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("HELLO");
+        if (collision.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(100);
+            Destroy(this.gameObject);
+        }
     }
 }

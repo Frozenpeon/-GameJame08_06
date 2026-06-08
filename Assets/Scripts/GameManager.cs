@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject spawnPoint;
     public GameObject mainCamera;
+    public EnemySpawner spawner;
     public HealthBarHandler healthBarHandler;
 
     GameObject player;
@@ -15,11 +17,23 @@ public class GameManager : MonoBehaviour
         mainCamera.GetComponent<CameraFollowPlayer>().Player = player;
         GetComponent<EnemySpawner>().Player = player;
         healthBarHandler.init(player.GetComponent<Health>());
+        player.GetComponent<WeaponHandler>().gameManager = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject getClosestEnemy()
     {
-        
+        GameObject res;
+        if (spawner.enemies.Count <= 0) { return null; }
+        else 
+            res = spawner.enemies[0];
+
+            for (int i = 0; i < spawner.enemies.Count; i++)
+            {
+                GameObject go = spawner.enemies[i];
+                Vector3 tempVec = go.transform.position - player.transform.position;
+                if (tempVec.magnitude >= (res.transform.position - player.transform.position).magnitude) 
+                    res = go;
+            }
+            return res;
     }
 }

@@ -143,6 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHandler
   weapons: []
+  gameManager: {fileID: 0}
+  elapsedTime: 0
+  weapon: {fileID: 11400000, guid: ab4b6b686ac60b3409801f5c71585e18, type: 2}
+  weaponSpeed: 2
+  bulletPrefab: {fileID: 9173457203174669581, guid: 13f676bc588966e479f50be6ab30cb45, type: 3}
 --- !u!1 &5558232680877244919
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,9 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private void GetKeyboardInput()
     {
         if (!canMove) return;
-
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        print(horizontalInput);
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * speed * Time.deltaTime;
         transform.Translate(movement);
     }
