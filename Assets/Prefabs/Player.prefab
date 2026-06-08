@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 10
   playerMovement: {fileID: 1853639980715788526}
+  playerAnim: {fileID: 3882332450878751177}
+  deathSprite: {fileID: -5793783286573933095, guid: 87461b5c23a23c04c876a0eba9476d72, type: 3}
 --- !u!1 &5558232680877244919
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,3 +238,4 @@ MonoBehaviour:
   - {fileID: -2494442190302250955, guid: 7c90e5427e6bd024b971cc220e7569e2, type: 3}
   spriteRenderer: {fileID: 3368722304598041368}
   animationSpeed: 0.3
+  deathSprite: {fileID: 0}

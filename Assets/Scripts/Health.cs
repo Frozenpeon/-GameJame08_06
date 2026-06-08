@@ -4,6 +4,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private PlayerAnim playerAnim;
+    [SerializeField] private Sprite deathSprite;
     private int currentHealth;
     void Start()
     {
@@ -25,6 +27,7 @@ public class Health : MonoBehaviour
         if(playerMovement != null)
         {
             playerMovement.SetCanMove(false);
+            playerAnim.SetDeathSprite();
         }
     }
 }
