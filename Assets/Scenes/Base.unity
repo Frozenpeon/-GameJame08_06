@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 18050578}
   - component: {fileID: 18050579}
   - component: {fileID: 18050580}
+  - component: {fileID: 18050581}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71cf3c983f98ac46a9594f22abd0407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  volume: 0.5
+  volume: 0.05
   musicSource: {fileID: 18050580}
   musicClip: {fileID: 8300000, guid: 45f9c255307d16c469ff47c21e2d2285, type: 3}
 --- !u!82 &18050580
@@ -280,6 +281,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &18050581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18050576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24adb23e608cd17489495bb009316a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Player: {fileID: 0}
+  elapsedTime: 0
+  timeToSpawn: 1
+  enemiesPrefab:
+  - {fileID: 6813516675019707831, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
+  - {fileID: 6309275428737970383, guid: 5f0ee493d7b3e164db6e1ffa118e2a5b, type: 3}
+  - {fileID: 1316453611640185219, guid: 11f281f9eb1485d46ae7921977ec3298, type: 3}
 --- !u!1 &1663553072
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,68 +482,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4112604746157790252
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034085785953303586, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6813516675019707831, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a2de652b8b139bf4f985fad0e07227fc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1663553076}
-  - {fileID: 4112604746157790252}
   - {fileID: 18050577}
   - {fileID: 2045704346}
