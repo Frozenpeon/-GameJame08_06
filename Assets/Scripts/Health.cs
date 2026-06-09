@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     private int currentHealth;
 
     public Action<int, int> takesDamage;
+    public Action Death;
+
 
     public List<AudioClip> hurtSounds = new List<AudioClip>();
     public AudioSource hurtSound;
@@ -48,6 +50,7 @@ public class Health : MonoBehaviour
         Debug.Log("YOU DIED");
         if(playerMovement != null)
         {
+            Death.Invoke();
             playerMovement.SetCanMove(false);
             playerAnim.SetDeathSprite();
         }

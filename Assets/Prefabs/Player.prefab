@@ -283,7 +283,9 @@ MonoBehaviour:
   weapons: []
   gameManager: {fileID: 0}
   elapsedTime: 0
-  weapon: {fileID: 11400000, guid: ab4b6b686ac60b3409801f5c71585e18, type: 2}
+  weaponFromStart:
+  - {fileID: 11400000, guid: ab4b6b686ac60b3409801f5c71585e18, type: 2}
+  - {fileID: 11400000, guid: 0fad3345e67152e4ca2136fc85f29441, type: 2}
   weaponSpeed: 2
   bulletPrefab: {fileID: 9173457203174669581, guid: 13f676bc588966e479f50be6ab30cb45, type: 3}
   shootSounds:

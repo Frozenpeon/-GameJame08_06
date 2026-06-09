@@ -8,14 +8,24 @@ public class SO_WeaponBaseScript : ScriptableObject
     public GameObject bulletPrefab;
     public float shootSpeed;
     public GameObject Player;
-    private int shot = 0;
+    public int shot = 0;
+    public WeaponHandler WH;
 
     public void tryToShoot(float elapsedTime, Vector2 direction)
     {
-        if (elapsedTime - shot * shootSpeed >= shootSpeed)
+        if (elapsedTime - (shot * shootSpeed) >= shootSpeed)
         {      
             Shoot(direction);
+        } 
+    }
+
+    public void keepShotTracks(float elapsedTime)
+    {
+        if (elapsedTime - (shot * shootSpeed) >= shootSpeed)
+        {
+            shot++;
         }
+
     }
 
     private void Shoot(Vector2 direction)
@@ -23,6 +33,7 @@ public class SO_WeaponBaseScript : ScriptableObject
         GameObject go = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
         Bullet bullet = go.GetComponent<Bullet>();
         bullet.direction = direction;
+        WH.PlayShootSound();
         shot++;
     }
 }
