@@ -292,7 +292,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 13e930c4cb135234fbb4bac1b5872ccf, type: 3}
   - {fileID: 8300000, guid: 14b377d747332ae44b1fa13d0d5c37e6, type: 3}
   shootSound: {fileID: 4990319867769914537}
-  shootVolume: 0.05
+  shootVolume: 0.2
 --- !u!70 &4844597885207478563
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

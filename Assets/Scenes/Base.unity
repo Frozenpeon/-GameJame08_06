@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71cf3c983f98ac46a9594f22abd0407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  volume: 0.05
+  volume: 0.2
   musicSource: {fileID: 18050580}
   musicClip: {fileID: 8300000, guid: 45f9c255307d16c469ff47c21e2d2285, type: 3}
 --- !u!82 &18050580
