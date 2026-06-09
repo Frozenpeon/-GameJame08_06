@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Sprite[] deathSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject gravePrefab;
     [SerializeField] private EnemyMovement enemyMovement;
     [SerializeField] private CapsuleCollider2D capsuleCollider2D;
     private float currentHealth;
@@ -37,11 +38,15 @@ public class EnemyHealth : MonoBehaviour
     }
 
     private void Die()
-    {   spriteRenderer.enabled = false;
+    {
+        onDeath?.Invoke(gameObject);
+        spriteRenderer.enabled = false;
         enemyMovement.SetCanMove(false);
         capsuleCollider2D.enabled = false;
+        GameObject go = Instantiate(gravePrefab, transform.position, Quaternion.identity);
+        go.GetComponent<SpriteRenderer>().sprite = deathSprite[UnityEngine.Random.Range(0, deathSprite.Length)];
         animator.SetTrigger("OnDeath");
-        onDeath?.Invoke(gameObject);
+        print("I die");
         Destroy(gameObject, 2f);
     }
 }

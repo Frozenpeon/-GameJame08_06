@@ -307,7 +307,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2531241511545790211, guid: 4023982b8e769eb47920ad9129cebcb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -463,4 +463,6 @@ MonoBehaviour:
   - {fileID: 4605685020492523063, guid: e4ac3317d0dfb0a4aa94f2da8a614743, type: 3}
   spriteRenderer: {fileID: 5337695144907084844}
   animator: {fileID: 913552084690144972}
+  gravePrefab: {fileID: 3898541175141570573, guid: 1b7de291d43ec3c408ca37404efcdbcd, type: 3}
   enemyMovement: {fileID: 4215966376955808466}
+  capsuleCollider2D: {fileID: 8038180530694689203}

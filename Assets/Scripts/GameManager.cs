@@ -1,3 +1,4 @@
+using System;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -9,7 +10,10 @@ public class GameManager : MonoBehaviour
     public EnemySpawner spawner;
     public HealthBarHandler healthBarHandler;
 
-    GameObject player;
+    public static Action<GameObject> PlayerSetUp;
+
+    public GameObject player;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +22,7 @@ public class GameManager : MonoBehaviour
         GetComponent<EnemySpawner>().Player = player;
         healthBarHandler.init(player.GetComponent<Health>());
         player.GetComponent<WeaponHandler>().gameManager = this;
+        PlayerSetUp?.Invoke(player);
     }
 
     public GameObject getClosestEnemy()
@@ -31,7 +36,7 @@ public class GameManager : MonoBehaviour
             {
                 GameObject go = spawner.enemies[i];
                 Vector3 tempVec = go.transform.position - player.transform.position;
-                if (tempVec.magnitude >= (res.transform.position - player.transform.position).magnitude) 
+                if (tempVec.magnitude <= (res.transform.position - player.transform.position).magnitude) 
                     res = go;
             }
             return res;
