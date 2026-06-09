@@ -464,3 +464,4 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5337695144907084844}
   animator: {fileID: 913552084690144972}
   enemyMovement: {fileID: 4215966376955808466}
+  capsuleCollider2D: {fileID: 8038180530694689203}

@@ -37,11 +37,13 @@ public class EnemyHealth : MonoBehaviour
     }
 
     private void Die()
-    {   spriteRenderer.enabled = false;
+    {
+        onDeath?.Invoke(gameObject);
+        spriteRenderer.enabled = false;
         enemyMovement.SetCanMove(false);
         capsuleCollider2D.enabled = false;
         animator.SetTrigger("OnDeath");
-        onDeath?.Invoke(gameObject);
+        print("I die");
         Destroy(gameObject, 2f);
     }
 }

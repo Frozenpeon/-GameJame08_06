@@ -8,16 +8,21 @@ public class WeaponHandler : MonoBehaviour
     public SO_WeaponBaseScript weapon;
     public float weaponSpeed = 2;
     public GameObject bulletPrefab;
+
+    public List<AudioClip> shootSounds = new List<AudioClip>();
+    public AudioSource shootSound;
+    public float shootVolume;
+
     private void Start()
     {
         AddAWeapon(weapon);    
+        shootSound.volume = shootVolume;
     }
 
 
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        print(elapsedTime);
         if (elapsedTime >= weaponSpeed)
         {
             if (gameManager.getClosestEnemy() == null)
@@ -26,6 +31,8 @@ public class WeaponHandler : MonoBehaviour
                 return;
 
             }
+            shootSound.clip = shootSounds[Random.Range(0, shootSounds.Count)];
+            shootSound.Play();
             GameObject go = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Bullet bullet = go.GetComponent<Bullet>();
             bullet.direction = (gameManager.getClosestEnemy().transform.position - transform.position).normalized;
